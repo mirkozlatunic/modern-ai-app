@@ -5,7 +5,7 @@ const Button = ({ className, href, onClick, children, px, white }) => {
     px || "px-7"
   } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
 
-  const spanClasses = "realtive z-10";
+  const spanClasses = "relative z-10";
 
   const renderButton = () => (
     <button className={classes} onClick={onClick}>
