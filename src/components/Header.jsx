@@ -10,14 +10,14 @@ import { useState } from "react";
 
 const Header = () => {
   const pathname = useLocation();
-  const [openNavigation, setopenNavigation] = useState(false);
+  const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
     if (openNavigation) {
-      setopenNavigation(false);
+      setOpenNavigation(false);
       enablePageScroll();
     } else {
-      setopenNavigation(true);
+      setOpenNavigation(true);
       disablePageScroll();
     }
   };
@@ -26,12 +26,12 @@ const Header = () => {
     if (!openNavigation) return;
 
     enablePageScroll();
-    setopenNavigation(false);
+    setOpenNavigation(false);
   };
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
+      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
@@ -53,7 +53,7 @@ const Header = () => {
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:mr-0.25 lg:text-xs lg:font-semibold ${
+                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                   item.url === pathname.hash
                     ? "z-2 lg:text-n-1"
                     : "lg:text-n-1/50"
@@ -63,6 +63,7 @@ const Header = () => {
               </a>
             ))}
           </div>
+
           <HamburgerMenu />
         </nav>
 
@@ -73,7 +74,7 @@ const Header = () => {
           New account
         </a>
         <Button className="hidden lg:flex" href="#login">
-          Sign In
+          Sign in
         </Button>
 
         <Button
