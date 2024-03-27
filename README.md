@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
 
-<video src="" width=500/>
+<video src="https://github.com/mirkozlatunic/modern-ai-app/assets/110959892/8e72ecc2-1ec3-4159-8722-77f13bc85738" width=500/>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
